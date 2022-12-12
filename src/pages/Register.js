@@ -50,7 +50,7 @@ function Register() {
           </form>
           <div class=" mt-3">
             <span>Already have an account? </span>
-            <a href="/" className="text-warning">
+            <a href="/#" className="text-warning">
               Log In
             </a>
           </div>

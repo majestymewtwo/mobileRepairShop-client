@@ -28,7 +28,7 @@ function Login() {
             </div>
             <div class="mt-3">
               <button class="btn btn-warning  text-white">
-                <a href="/home" className="text-decoration-none text-white">
+                <a href="/#/home" className="text-decoration-none text-white">
                   Login
                 </a>
               </button>
@@ -37,7 +37,7 @@ function Login() {
           <div class="mt-3">
             <span>
               Don't have account?
-              <a href="/register" className="text-warning">
+              <a href="/#/register" className="text-warning">
                 Sign Up
               </a>
             </span>

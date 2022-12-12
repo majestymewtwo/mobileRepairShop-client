@@ -11,22 +11,22 @@ function Header(props){
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className={`nav-link ${props.home} mx-3  fw-bold`} href="/home">Home</a>
+                <a className={`nav-link ${props.home} mx-3  fw-bold`} href="/#/home">Home</a>
               </li>
               <li className="nav-item">
-                <a className={`nav-link ${props.blog} mx-3  fw-bold`} href="/blog">Blog</a>
+                <a className={`nav-link ${props.blog} mx-3  fw-bold`} href="/#/blog">Blog</a>
               </li>
               <li className="nav-item">
-                <a className={`nav-link ${props.profile} mx-3  fw-bold`} href="/profile">Profile</a>
+                <a className={`nav-link ${props.profile} mx-3  fw-bold`} href="/#/profile">Profile</a>
               </li>
               <li className="nav-item">
-                <a className={`nav-link ${props.book} mx-3  fw-bold`} href="/book">Book</a>
+                <a className={`nav-link ${props.book} mx-3  fw-bold`} href="/#/book">Book</a>
               </li>
               <li className="nav-item">
-                <a className={`nav-link ${props.contact} mx-3  fw-bold`} href="/contact">Contact us</a>
+                <a className={`nav-link ${props.contact} mx-3  fw-bold`} href="/#/contact">Contact us</a>
               </li>
               <li className="nav-item">
-                <button type="button" class="btn btn-outline-warning mx-3"><a href="/" style={{textDecoration:"none",color:"white"}}>Log Out</a></button>
+                <button type="button" class="btn btn-outline-warning mx-3"><a href="/#" style={{textDecoration:"none",color:"white"}}>Log Out</a></button>
               </li>
             </ul>
           </div>

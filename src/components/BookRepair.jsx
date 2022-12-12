@@ -2,6 +2,7 @@ function BookRepair(){
     return(
         <div className="px-4 py-5 bg-dark text-white">
             <div className="container col-8">
+                <h1 className="text-warning text-center">Book a new repair</h1>
                 <form action="">
                     <div className="mb-3">
                         <label htmlFor="mobileBrand" className="form-label">Select your mobile brand : </label>
