@@ -37,11 +37,14 @@ function Contact() {
   }
 
   async function userAuth() {
-    const response = await fetch("http://localhost:1337/api/user", {
-      headers: {
-        "x-access-token": localStorage.getItem("token"),
-      },
-    });
+    const response = await fetch(
+      "https://mobile-repair-shop-server.onrender.com/api/user",
+      {
+        headers: {
+          "x-access-token": localStorage.getItem("token"),
+        },
+      }
+    );
     const data = await response.json();
     if (data.user) {
       setAuth(true);
