@@ -1,14 +1,14 @@
-function ProfileComp(){
+function ProfileComp(props){
     return(
         <body class="bg-dark">
             <div class="container">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-md-10 mt-5 pt-5">
+                    <div class="col-10 my-5 pt-5">
                         <div class="row z-depth-3">
                             <div class="col-sm-4 bg-warning rounded-start">
                                 <div class="card-block text-center text-white">
                                     <i class="fas fa-user-tie fa-7x mt-5"></i>
-                                    <h2 class="font-weight-bold mt-4">Name</h2>
+                                    <h2 class="font-weight-bold mt-4">{props.name}</h2>
                                     <p>Customer</p>
                                     <i class="far fa-edit fa-2x mb-4"></i>
                                 </div>
@@ -18,29 +18,30 @@ function ProfileComp(){
                                 <hr class="badge-warning mt-0 w-100"/>
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <p class="fw-bold fs-5 text-warning">Name:</p>
-                                        <h6 class="fs-4">Customer name</h6>
+                                        <p class="fw-bold fs-5 text-warning">First Name :</p>
+                                        <h6 class="fs-4">{props.firstName}</h6>
                                     </div>
                                     <div class="col-sm-6">
-                                        <p class="fw-bold fs-5 text-warning">Phone:</p>
-                                        <h6 class="fs-5">+91 9876543210</h6>
+                                        <p class="fw-bold fs-5 text-warning">Last Name :</p>
+                                        <h6 class="fs-5">{props.lastName}</h6>
 
                                     </div>
                                 </div>
 
-                                 <div class="row">
-                                    <div class="col-sm-6">
-                                        <p class="fw-bold fs-5 text-warning">Email:</p>
-                                        <h6 class="fs-4">name@gmail.com</h6>
+                                 <div class="row mb-2">
+                                    <div class="col-lg-6">
+                                        <p class="fw-bold fs-5 text-warning">Email :</p>
+                                        <h6 class="fs-4">{props.email}</h6>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <p class="fw-bold fs-5 text-warning">Address:</p>
-                                        <h6 class="fs-5">No.69, Cross Street, Chennai - 069</h6>
-
+                                    <div class="col-lg-6">
+                                        <p class="fw-bold fs-5 text-warning">Phone :</p>
+                                        <h6 class="fs-5">{props.contactNo}</h6>
                                     </div>
-
                                 </div>
-
+                                <div className="row">
+                                    <p class="fw-bold fs-5 text-warning">Address :</p>
+                                    <p class="fs-5">{props.address}</p>
+                                </div>
                         </div>
                     </div>
                 </div>

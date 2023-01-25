@@ -5,21 +5,25 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Contact from "./pages/Contact";
-import { Routes, Route } from "react-router-dom";
+import Repairs from "./pages/Repairs";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Book from "./pages/Book";
 
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Login />}></Route>
-        <Route path="register" element={<Register />}></Route>
-        <Route path="home" element={<Home />}></Route>
-        <Route path="blog" element={<Blog />}></Route>
-        <Route path="book" element={<Book />}></Route>
-        <Route path="profile" element={<Profile />}></Route>
-        <Route path="contact" element={<Contact />}></Route>
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login />}></Route>
+          <Route path='/register' element={<Register />}></Route>
+          <Route path='/home' element={<Home />}></Route>
+          <Route path='/blog' element={<Blog />}></Route>
+          <Route path='/book' element={<Book />}></Route>
+          <Route path='/profile' element={<Profile />}></Route>
+          <Route path='/contact' element={<Contact />}></Route>
+          <Route path='/repairs' element={<Repairs />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

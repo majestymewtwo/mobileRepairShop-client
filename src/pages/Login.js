@@ -1,45 +1,79 @@
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  async function loginUser(event) {
+    event.preventDefault();
+    const response = await fetch(
+      "https://mobile-repair-shop-server.onrender.com/api/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      }
+    );
+    const data = await response.json();
+    if (data.user) {
+      localStorage.setItem("token", data.user);
+      window.location.href = "/home";
+    } else {
+      alert("Please check your username and password");
+    }
+  }
+
   return (
-    <div className="bg-dark" style={{ height: "100vh" }}>
-      <div className="row justify-content-center" style={{ padding: "9% 1%" }}>
-        <div class="col-10 col-md-5 form-box login-form p-5 bg-light rounded-3 my-auto">
-          <div class="form-title">
+    <div className='bg-dark' style={{ height: "100vh" }}>
+      <div className='row justify-content-center' style={{ padding: "9% 1%" }}>
+        <div className='col-10 col-md-5 form-box login-form p-5 bg-light rounded-3 my-auto'>
+          <div className='form-title'>
             <h5>Welcome to Mobile Repair Shop!</h5>
-            <h2 class="fw-bold mb-4">Login</h2>
+            <h2 className='fw-bold mb-4'>Login</h2>
           </div>
-          <form action="">
-            <div class="form-floating mb-4">
+          <form onSubmit={loginUser}>
+            <div className='form-floating mb-4'>
               <input
-                type="email"
-                class="form-control form-control-sm"
-                placeholder="Email"
-                id="floatingInput"
+                className='form-control form-control-sm'
+                type='email'
+                value={email}
+                placeholder='email'
+                onChange={(e) => setEmail(e.target.value)}
+                id='floataingInput'
               />
-              <label htmlFor="floatingInput">Email</label>
+              <label htmlFor='floatingInput'>Email</label>
             </div>
-            <div class="form-floating mb-3">
+            <div className='form-floating mb-3'>
               <input
-                type="password"
-                class="form-control form-control-sm"
-                placeholder="Password"
-                id="floatingPassword"
+                className='form-control form-control-sm'
+                id='floatingPassword'
+                type='password'
+                value={password}
+                placeholder='password'
+                onChange={(e) => setPassword(e.target.value)}
               />
-              <label htmlFor="floatingPassword">Password</label>
+              <label htmlFor='floatingPassword'>Password</label>
             </div>
-            <div class="mt-3">
-              <button class="btn btn-warning  text-white">
-                <a href="/#/home" className="text-decoration-none text-white">
-                  Login
-                </a>
-              </button>
+            <div className='mt-3'>
+              <input
+                className='btn btn-warning  text-white'
+                type='submit'
+                value='Login'
+              />
             </div>
           </form>
-          <div class="mt-3">
+          <div className='mt-3'>
             <span>
               Don't have account?
-              <a href="/#/register" className="text-warning">
+              <Link to='/register' className='text-warning'>
                 Sign Up
-              </a>
+              </Link>
             </span>
           </div>
         </div>
