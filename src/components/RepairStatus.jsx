@@ -48,12 +48,12 @@ export default function RepairStatus(props){
                 <h4 className="mx-auto mt-2">Repair in Progress</h4>
             </span>
             <span className="d-flex flex-column mx-lg-5">
-                {props.delivery && (
+                {props.deliver && (
                     <div className="bg-success circle mx-auto mx-lg-5">
                         <h1>4</h1>
                     </div>
                 )}
-                {!props.delivery && (
+                {!props.deliver && (
                     <div className="bg-warning circle mx-auto mx-lg-5">
                         <h1>4</h1>
                     </div>
