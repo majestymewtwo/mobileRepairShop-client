@@ -31,15 +31,18 @@ export default function Status() {
   }
 
   async function getRepairs() {
-    const response = await fetch("http://localhost:1337/api/repairs", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-      }),
-    });
+    const response = await fetch(
+      "https://mobile-repair-shop-server.onrender.com/api/repairs",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+        }),
+      }
+    );
     const data = await response.json();
     setRepairs(data.list);
   }
