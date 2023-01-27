@@ -6,7 +6,7 @@ export default function RepairList(props){
           <div className="card bg-dark text-white">
             <div className="card-body">
               <h4 className="card-subtitle text-warning mb-3">
-                Order Date : {props.orderDate}
+                Order Date : {props.date}
               </h4>
               <h5 className="card-text">Phone Brand : {props.brand}</h5>
               <h5 className="card-text">Phone Model : {props.model}</h5>

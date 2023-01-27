@@ -44,7 +44,7 @@ export default function Status() {
       }
     );
     const data = await response.json();
-    setRepairs(data.list);
+    setRepairs(data.list.reverse());
   }
 
   return (
@@ -78,6 +78,7 @@ export default function Status() {
                   collect={repair.collect}
                   repair={repair.repair}
                   deliver={repair.deliver}
+                  date={repair.date}
                 />
               );
             })}

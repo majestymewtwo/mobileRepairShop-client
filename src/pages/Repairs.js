@@ -44,7 +44,7 @@ function Repairs() {
       }
     );
     const data = await response.json();
-    setRepairs(data.list);
+    setRepairs(data.list.reverse());
   }
 
   return (
@@ -74,6 +74,7 @@ function Repairs() {
                   imei={repair.imei}
                   repairType={repair.type}
                   status={repair.status}
+                  date={repair.date}
                 />
               );
             })}

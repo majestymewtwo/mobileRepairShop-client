@@ -3,6 +3,10 @@ import "./Main.css";
 export default function RepairStatus(props){
     return(
         <div className="text-white px-lg-5">
+            <h5 className="d-flex card-text">
+                Order Date : 
+                <h5 className="mx-2 text-warning">{props.date}</h5>
+            </h5>
             <h5 className="card-text">Phone Brand : {props.brand}</h5>
             <h5 className="card-text">Phone Model : {props.model}</h5>
             <h5 className="card-text">IMEI no : {props.imei}</h5>

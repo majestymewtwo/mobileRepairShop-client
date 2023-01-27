@@ -53,6 +53,7 @@ function Book() {
           collect: false,
           repair: false,
           deliver: false,
+          date: new Date().toLocaleDateString(),
         }),
       }
     );
