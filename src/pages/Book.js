@@ -34,24 +34,25 @@ function Book() {
 
   async function bookRepair(event) {
     event.preventDefault();
-    const response = await fetch(
-      "https://mobile-repair-shop-server.onrender.com/api/repair",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          brand,
-          model,
-          imei,
-          status,
-          description,
-          type,
-          email,
-        }),
-      }
-    );
+    const response = await fetch("http://localhost:1337/api/repair", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        brand,
+        model,
+        imei,
+        status,
+        description,
+        type,
+        email,
+        order: true,
+        collect: false,
+        repair: false,
+        deliver: false,
+      }),
+    });
 
     const data = await response.json();
     if (data.repair) {

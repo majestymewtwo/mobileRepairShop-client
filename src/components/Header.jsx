@@ -29,6 +29,9 @@ function Header(props){
                 <Link className={`nav-link ${props.book} mx-3  fw-bold`} to="/book">Book</Link>
               </li>
               <li className="nav-item">
+                <Link className={`nav-link ${props.status} mx-3  fw-bold`} to="/status">Status</Link>
+              </li>
+              <li className="nav-item">
                 <Link className={`nav-link ${props.repairs} mx-3  fw-bold`} to="/repairs">Repairs</Link>
               </li>
               <li className="nav-item">

@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Repairs from "./pages/Repairs";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Book from "./pages/Book";
+import Status from "./pages/Status";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/profile' element={<Profile />}></Route>
           <Route path='/contact' element={<Contact />}></Route>
           <Route path='/repairs' element={<Repairs />}></Route>
+          <Route path='/status' element={<Status />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
