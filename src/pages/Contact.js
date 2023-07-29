@@ -14,7 +14,7 @@ function Contact() {
   async function sendQuery(event) {
     event.preventDefault();
     const response = await fetch(
-      "https://mobile-repair-shop-server.onrender.com/api/contact",
+      "https://giddy-alligator.cyclic.app/api/contact",
       {
         method: "POST",
         headers: {

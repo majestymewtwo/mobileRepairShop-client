@@ -10,7 +10,7 @@ function Blog() {
   const [email, setEmail] = useState("");
   async function userAuth() {
     const response = await fetch(
-      "https://mobile-repair-shop-server.onrender.com/api/user",
+      "https://giddy-alligator.cyclic.app/api/user",
       {
         headers: {
           "x-access-token": localStorage.getItem("token"),

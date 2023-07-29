@@ -8,7 +8,7 @@ function Login() {
   async function loginUser(event) {
     event.preventDefault();
     const response = await fetch(
-      "https://mobile-repair-shop-server.onrender.com/api/login",
+      "https://giddy-alligator.cyclic.app/api/login",
       {
         method: "POST",
         headers: {
@@ -61,11 +61,9 @@ function Login() {
               <label htmlFor='floatingPassword'>Password</label>
             </div>
             <div className='mt-3'>
-              <input
-                className='btn btn-warning  text-white'
-                type='submit'
-                value='Login'
-              />
+              <button className='btn btn-warning  text-white' type='submit'>
+                Login
+              </button>
             </div>
           </form>
           <div className='mt-3'>

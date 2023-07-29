@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import ErrorPage from "../components/ErrorPage";
+import { useNavigate } from "react-router-dom";
 
 function Book() {
   const [auth, setAuth] = useState(false);
@@ -12,10 +13,11 @@ function Book() {
   const [description, setDescription] = useState("");
   const [type, setType] = useState("");
   const [status, setStatus] = useState("pending");
+  const navigator = useNavigate();
 
   async function userAuth() {
     const response = await fetch(
-      "https://mobile-repair-shop-server.onrender.com/api/user",
+      "https://giddy-alligator.cyclic.app/api/user",
       {
         headers: {
           "x-access-token": localStorage.getItem("token"),
@@ -35,7 +37,7 @@ function Book() {
   async function bookRepair(event) {
     event.preventDefault();
     const response = await fetch(
-      "https://mobile-repair-shop-server.onrender.com/api/repair",
+      "https://giddy-alligator.cyclic.app/api/repair",
       {
         method: "POST",
         headers: {
@@ -61,7 +63,7 @@ function Book() {
     const data = await response.json();
     if (data.repair) {
       alert("Your request for repair has been booked successfuly");
-      window.location.href = "/book";
+      navigator("/book");
     } else {
       console.log(data);
       alert("An unknown error has occured");

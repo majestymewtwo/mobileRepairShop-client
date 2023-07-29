@@ -17,6 +17,28 @@
     line-height: 100px;
 }
 
+.hero-section {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.hero-section::after {
+    content: "";
+    background-image: url(../home.jpg);
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.hero-container {
+    z-index: 200;
+    padding: 15% 7%;
+}
 @media only screen and (max-width: 800px) {
     .error-page {
         padding-top: 20%;

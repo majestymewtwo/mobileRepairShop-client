@@ -15,7 +15,7 @@ function Repairs() {
 
   async function userAuth() {
     const response = await fetch(
-      "https://mobile-repair-shop-server.onrender.com/api/user",
+      "https://giddy-alligator.cyclic.app/api/user",
       {
         headers: {
           "x-access-token": localStorage.getItem("token"),
@@ -32,7 +32,7 @@ function Repairs() {
 
   async function getRepairs() {
     const response = await fetch(
-      "https://mobile-repair-shop-server.onrender.com/api/repairs",
+      "https://giddy-alligator.cyclic.app/api/repairs",
       {
         method: "POST",
         headers: {

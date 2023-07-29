@@ -14,7 +14,7 @@ function Register() {
     event.preventDefault();
 
     const response = await fetch(
-      "https://mobile-repair-shop-server.onrender.com/api/register",
+      "https://giddy-alligator.cyclic.app/api/register",
       {
         method: "POST",
         headers: {
@@ -37,6 +37,7 @@ function Register() {
       alert("Succefully Registered");
       window.location.href = "/";
     } else {
+      console.log(data);
       alert("Email already exists");
     }
   }
